@@ -1,6 +1,6 @@
 *** Settings ***
 Resource    import.resource
-Variables   D:/C/pyrobothome/dataHome.yaml
+Variables   C:/robot_framework_home_work-main/dataHome.yaml
 
 *** Variables ***
 ${TAX_RATE}     0.08    # 8% tax rate
