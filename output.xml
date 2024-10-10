@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.7 on win32)" generated="2024-10-11T03:22:11.228501" rpa="false" schemaversion="5">
+<suite id="s1" name="Homework" source="C:\robot_framework_home_work-main\homework.robot">
+<test id="s1-t1" name="Open web site testingv" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:11.428557" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/index.html'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-11T03:22:11.428557" elapsed="1.706068"/>
+</kw>
+<kw name="Verify page login">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="login-button"]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-11T03:22:13.134625" elapsed="0.024031"/>
+</kw>
+<status status="PASS" start="2024-10-11T03:22:13.134625" elapsed="0.029932"/>
+</kw>
+<kw name="Input username">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:13.164557" level="INFO">Typing text 'standard_user' into text field '//*[@id="user-name"]'.</msg>
+<arg>//*[@id="user-name"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:13.164557" elapsed="0.113645"/>
+</kw>
+<arg>${name.standard.user}</arg>
+<status status="PASS" start="2024-10-11T03:22:13.164557" elapsed="0.113645"/>
+</kw>
+<kw name="Input password">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:13.278202" level="INFO">Typing text 'secret_sauce' into text field '//*[@id="password"]'.</msg>
+<arg>//*[@id="password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:13.278202" elapsed="0.086380"/>
+</kw>
+<arg>${name.standard.password}</arg>
+<status status="PASS" start="2024-10-11T03:22:13.278202" elapsed="0.086380"/>
+</kw>
+<kw name="Click login">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:13.364582" level="INFO">Clicking button '//*[@id="login-button"]'.</msg>
+<arg>//*[@id="login-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:13.364582" elapsed="0.325616"/>
+</kw>
+<status status="PASS" start="2024-10-11T03:22:13.364582" elapsed="0.325616"/>
+</kw>
+<kw name="Verify page products">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[contains(text(),"Products")]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-11T03:22:13.690198" elapsed="0.033094"/>
+</kw>
+<status status="PASS" start="2024-10-11T03:22:13.690198" elapsed="0.033094"/>
+</kw>
+<kw name="Verify list Product">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:13.748211" level="INFO">${product1name} = Sauce Labs Backpack</msg>
+<var>${product1name}</var>
+<arg>//*[@id="item_4_title_link"]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:13.723292" elapsed="0.024919"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:13.764648" level="INFO">${product1detail} = carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.</msg>
+<var>${product1detail}</var>
+<arg>//*[@id="inventory_container"]/div/div[1]/div[2]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:13.748211" elapsed="0.016437"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:13.784749" level="INFO">${product1price} = $29.99</msg>
+<var>${product1price}</var>
+<arg>(//*[@id="inventory_container"]/div/div[1]/div[3]/div)[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:13.764648" elapsed="0.020101"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:13.798079" level="INFO">${product2name} = Sauce Labs Bike Light</msg>
+<var>${product2name}</var>
+<arg>//*[@id="item_0_title_link"]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:13.784749" elapsed="0.013330"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:13.818181" level="INFO">${product2detail} = A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.</msg>
+<var>${product2detail}</var>
+<arg>//*[@id="inventory_container"]/div/div[2]/div[2]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:13.798079" elapsed="0.020102"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:13.829242" level="INFO">${product2price} = $9.99</msg>
+<var>${product2price}</var>
+<arg>//*[@id="inventory_container"]/div/div[2]/div[3]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:13.818181" elapsed="0.011061"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:13.848512" level="INFO">${product3name} = Sauce Labs Bolt T-Shirt</msg>
+<var>${product3name}</var>
+<arg>//*[@id="item_1_title_link"]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:13.829242" elapsed="0.019270"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:13.864395" level="INFO">${product3detail} = Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.</msg>
+<var>${product3detail}</var>
+<arg>//*[@id="inventory_container"]/div/div[3]/div[2]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:13.848512" elapsed="0.015883"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:13.878532" level="INFO">${product3price} = $15.99</msg>
+<var>${product3price}</var>
+<arg>//*[@id="inventory_container"]/div/div[3]/div[3]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:13.864395" elapsed="0.014137"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:13.888553" level="INFO">${product4name} = Sauce Labs Fleece Jacket</msg>
+<var>${product4name}</var>
+<arg>//*[@id="item_5_title_link"]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:13.878532" elapsed="0.010021"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:13.908494" level="INFO">${product4detail} = It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.</msg>
+<var>${product4detail}</var>
+<arg>//*[@id="inventory_container"]/div/div[4]/div[2]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:13.888553" elapsed="0.019941"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:13.918525" level="INFO">${product4price} = $49.99</msg>
+<var>${product4price}</var>
+<arg>//*[@id="inventory_container"]/div/div[4]/div[3]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:13.908494" elapsed="0.010031"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:13.928433" level="INFO">${product5name} = Sauce Labs Onesie</msg>
+<var>${product5name}</var>
+<arg>//*[@id="item_2_title_link"]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:13.918525" elapsed="0.009908"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:13.944581" level="INFO">${product5detail} = Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.</msg>
+<var>${product5detail}</var>
+<arg>//*[@id="inventory_container"]/div/div[5]/div[2]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:13.935012" elapsed="0.013087"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:13.960145" level="INFO">${product5price} = $7.99</msg>
+<var>${product5price}</var>
+<arg>//*[@id="inventory_container"]/div/div[5]/div[3]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:13.948099" elapsed="0.012046"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:13.968237" level="INFO">${product6name} = Test.allTheThings() T-Shirt (Red)</msg>
+<var>${product6name}</var>
+<arg>//*[@id="item_3_title_link"]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:13.960145" elapsed="0.008092"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:13.984698" level="INFO">${product6detail} = This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.</msg>
+<var>${product6detail}</var>
+<arg>//*[@id="inventory_container"]/div/div[6]/div[2]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:13.968237" elapsed="0.016461"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:13.998102" level="INFO">${product6price} = $15.99</msg>
+<var>${product6price}</var>
+<arg>//*[@id="inventory_container"]/div/div[6]/div[3]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:13.984698" elapsed="0.013404"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${product1name}</arg>
+<arg>${product.p1.name}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-10-11T03:22:13.998102" elapsed="0.003039"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${product1detail}</arg>
+<arg>${product.p1.description}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.001141" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${product1price}</arg>
+<arg>$${product.p1.price}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.001141" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${product2name}</arg>
+<arg>${product.p2.name}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.001141" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${product2detail}</arg>
+<arg>${product.p2.description}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.001141" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${product2price}</arg>
+<arg>$${product.p2.price}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.001141" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${product3name}</arg>
+<arg>${product.p3.name}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.001141" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${product3detail}</arg>
+<arg>${product.p3.description}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.001141" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${product3price}</arg>
+<arg>$${product.p3.price}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.001141" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${product4name}</arg>
+<arg>${product.p4.name}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.001141" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${product4detail}</arg>
+<arg>${product.p4.description}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.001141" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${product4price}</arg>
+<arg>$${product.p4.price}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.001141" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${product5name}</arg>
+<arg>${product.p5.name}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.001141" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${product5detail}</arg>
+<arg>${product.p5.description}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.001141" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${product5price}</arg>
+<arg>$${product.p5.price}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.001141" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${product6name}</arg>
+<arg>${product.p6.name}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.001141" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${product6detail}</arg>
+<arg>${product.p6.description}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.001141" elapsed="0.007023"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${product6price}</arg>
+<arg>$${product.p6.price}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.008164" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-10-11T03:22:13.723292" elapsed="0.284872"/>
+</kw>
+<kw name="Click add cart">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:14.009194" level="INFO">Clicking button '//*[@id="inventory_container"]/div/div[1]/div[3]/button'.</msg>
+<arg>//*[@id="inventory_container"]/div/div[1]/div[3]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.009194" elapsed="0.040294"/>
+</kw>
+<status status="PASS" start="2024-10-11T03:22:14.008164" elapsed="0.041324"/>
+</kw>
+<kw name="Click cart">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:14.049488" level="INFO">Clicking element '//*[@id="shopping_cart_container"]/a'.</msg>
+<arg>//*[@id="shopping_cart_container"]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.049488" elapsed="0.099013"/>
+</kw>
+<status status="PASS" start="2024-10-11T03:22:14.049488" elapsed="0.099013"/>
+</kw>
+<kw name="Verify page cart">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="contents_wrapper"]/div[2]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.148501" elapsed="0.019627"/>
+</kw>
+<status status="PASS" start="2024-10-11T03:22:14.148501" elapsed="0.019627"/>
+</kw>
+<kw name="Verify product in cart">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:14.180195" level="INFO">${productname} = Sauce Labs Backpack</msg>
+<var>${productname}</var>
+<arg>//*[@id="item_4_title_link"]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.168128" elapsed="0.012067"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:14.198222" level="INFO">${productdetail} = carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.</msg>
+<var>${productdetail}</var>
+<arg>//*[@id="cart_contents_container"]/div/div[1]/div[3]/div[2]/div[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.180195" elapsed="0.018027"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:14.212561" level="INFO">${price} = 29.99</msg>
+<var>${price}</var>
+<arg>//*[@id="cart_contents_container"]/div/div[1]/div[3]/div[2]/div[2]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.198222" elapsed="0.014339"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${productname}</arg>
+<arg>${product.p1.name}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.212561" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${productdetail}</arg>
+<arg>${product.p1.description}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.212561" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2024-10-11T03:22:14.212561" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'float'&gt;</msg>
+<arg>${price}</arg>
+<arg>${product.p1.price}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.212561" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-10-11T03:22:14.168128" elapsed="0.044433"/>
+</kw>
+<kw name="Click checkout">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:14.212561" level="INFO">Clicking element '//*[@id="cart_contents_container"]/div/div[2]/a[2]'.</msg>
+<arg>//*[@id="cart_contents_container"]/div/div[2]/a[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.212561" elapsed="0.085837"/>
+</kw>
+<status status="PASS" start="2024-10-11T03:22:14.212561" elapsed="0.085837"/>
+</kw>
+<kw name="Verify page Information">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="contents_wrapper"]/div[2]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.298398" elapsed="0.011166"/>
+</kw>
+<status status="PASS" start="2024-10-11T03:22:14.298398" elapsed="0.011166"/>
+</kw>
+<kw name="Input Information">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:14.309564" level="INFO">Typing text 'ftest' into text field '//*[@id="first-name"]'.</msg>
+<arg>//*[@id="first-name"]</arg>
+<arg>ftest</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.309564" elapsed="0.089641"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:14.399205" level="INFO">Typing text 'ltest' into text field '//*[@id="last-name"]'.</msg>
+<arg>//*[@id="last-name"]</arg>
+<arg>ltest</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.399205" elapsed="0.081969"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:14.481174" level="INFO">Typing text '52000' into text field '//*[@id="postal-code"]'.</msg>
+<arg>//*[@id="postal-code"]</arg>
+<arg>52000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.481174" elapsed="0.083277"/>
+</kw>
+<status status="PASS" start="2024-10-11T03:22:14.309564" elapsed="0.254887"/>
+</kw>
+<kw name="Click Continue">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:14.564451" level="INFO">Clicking button '//*[@id="checkout_info_container"]/div/form/div[2]/input'.</msg>
+<arg>//*[@id="checkout_info_container"]/div/form/div[2]/input</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.564451" elapsed="0.106825"/>
+</kw>
+<status status="PASS" start="2024-10-11T03:22:14.564451" elapsed="0.106825"/>
+</kw>
+<kw name="Verify page checkout">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="contents_wrapper"]/div[2]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.671276" elapsed="0.026823"/>
+</kw>
+<status status="PASS" start="2024-10-11T03:22:14.671276" elapsed="0.026823"/>
+</kw>
+<kw name="Verify Checkout Overview">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:14.708205" level="INFO">${productNameOverview} = Sauce Labs Backpack</msg>
+<var>${productNameOverview}</var>
+<arg>//*[@id="item_4_title_link"]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.700620" elapsed="0.007585"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:14.728388" level="INFO">${productDetailOverview} = carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.</msg>
+<var>${productDetailOverview}</var>
+<arg>//*[@id="checkout_summary_container"]/div/div[1]/div[3]/div[2]/div[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.708205" elapsed="0.020183"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:14.740503" level="INFO">${productPriceOverview} = $29.99</msg>
+<var>${productPriceOverview}</var>
+<arg>//*[@id="checkout_summary_container"]/div/div[1]/div[3]/div[2]/div[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.728388" elapsed="0.012115"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-10-11T03:22:14.740503" level="INFO">${productPriceOverview_$} = $$29.99</msg>
+<var>${productPriceOverview_$}</var>
+<arg>$${productPriceOverview}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.740503" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:14.765017" level="INFO">${itemTotal} = Item total: $29.99</msg>
+<var>${itemTotal}</var>
+<arg>//*[@id="checkout_summary_container"]/div/div[2]/div[5]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.748602" elapsed="0.016415"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-10-11T03:22:14.765017" level="INFO">${itemTotal_price} = $29.99</msg>
+<var>${itemTotal_price}</var>
+<arg>${itemTotal.split()[-1]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.765017" elapsed="0.000000"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2024-10-11T03:22:14.765017" level="INFO">${itemPrice_without_dollar} = 29.99</msg>
+<var>${itemPrice_without_dollar}</var>
+<arg>${itemTotal_price}</arg>
+<arg>$</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.765017" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-10-11T03:22:14.768598" level="INFO">${itemTotal_chack} = Item total: $29.99</msg>
+<var>${itemTotal_chack}</var>
+<arg>Item total: $${product.p1.price}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.765017" elapsed="0.003581"/>
+</kw>
+<kw name="Calculate Tax">
+<kw name="Convert To Number" owner="BuiltIn">
+<msg time="2024-10-11T03:22:14.768695" level="INFO">${amount_float} = 29.99</msg>
+<var>${amount_float}</var>
+<arg>${amount}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.768695" elapsed="0.000000"/>
+</kw>
+<kw name="Convert To Number" owner="BuiltIn">
+<msg time="2024-10-11T03:22:14.768695" level="INFO">${tax_float} = 0.08</msg>
+<var>${tax_float}</var>
+<arg>${tax_rate}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.768695" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-11T03:22:14.768695" level="INFO">${tax} = 2.40</msg>
+<var>${tax}</var>
+<arg>"{:.2f}".format(round(${amount_float} * ${tax_rate},2))</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.768695" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${tax}</value>
+<status status="PASS" start="2024-10-11T03:22:14.768695" elapsed="0.000000"/>
+</return>
+<msg time="2024-10-11T03:22:14.768695" level="INFO">${calculated_tax} = 2.40</msg>
+<var>${calculated_tax}</var>
+<arg>${itemPrice_without_dollar}</arg>
+<arg>${TAX_RATE}</arg>
+<status status="PASS" start="2024-10-11T03:22:14.768695" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:14.781345" level="INFO">${TaxPage} = Tax: $2.40</msg>
+<var>${TaxPage}</var>
+<arg>//*[@id="checkout_summary_container"]/div/div[2]/div[6]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.768695" elapsed="0.012650"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-10-11T03:22:14.781345" level="INFO">${TaxPagePrice} = $2.40</msg>
+<var>${TaxPagePrice}</var>
+<arg>${TaxPage.split()[-1]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.781345" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:14.798530" level="INFO">${totle} = Total: $32.39</msg>
+<var>${totle}</var>
+<arg>//*[@id="checkout_summary_container"]/div/div[2]/div[7]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.781345" elapsed="0.017185"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-10-11T03:22:14.798530" level="INFO">${totleOnlyPrice} = $32.39</msg>
+<var>${totleOnlyPrice}</var>
+<arg>${totle.split()[-1]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.798530" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-11T03:22:14.798530" level="INFO">${sum} = 32.39</msg>
+<var>${sum}</var>
+<arg>${itemPrice_without_dollar} + ${calculated_tax}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.798530" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${itemTotal}</arg>
+<arg>${itemTotal_chack}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.798530" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${TaxPagePrice}</arg>
+<arg>$${calculated_tax}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.798530" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${totleOnlyPrice}</arg>
+<arg>$${sum}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.798530" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-10-11T03:22:14.700620" elapsed="0.097910"/>
+</kw>
+<kw name="Click Finish">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-11T03:22:14.805582" level="INFO">Clicking element '//*[@id="checkout_summary_container"]/div/div[2]/div[8]/a[2]'.</msg>
+<arg>//*[@id="checkout_summary_container"]/div/div[2]/div[8]/a[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.805582" elapsed="0.102955"/>
+</kw>
+<status status="PASS" start="2024-10-11T03:22:14.805582" elapsed="0.106484"/>
+</kw>
+<kw name="Verify Finish">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="checkout_complete_container"]/img</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-11T03:22:14.912066" elapsed="0.016176"/>
+</kw>
+<status status="PASS" start="2024-10-11T03:22:14.912066" elapsed="0.016176"/>
+</kw>
+<status status="PASS" start="2024-10-11T03:22:11.428557" elapsed="3.499685"/>
+</test>
+<status status="PASS" start="2024-10-11T03:22:11.236538" elapsed="3.691704"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Homework">Homework</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
